@@ -10,6 +10,6 @@
       <name><![CDATA[Luna D Dragon]]></name>
     </owner>
     <source type="git">git://github.com/Lunarequest/gentoo-overlay.git</source>
-    <feed>http://github.com/Lunarequest/gentoo-overlay/commits/master.atom</feed>
+    <feed>http://github.com/Lunarequest/gentoo-overlay/commits/mistress.atom</feed>
   </repo>
 </repositories>
