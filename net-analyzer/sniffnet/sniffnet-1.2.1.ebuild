@@ -463,16 +463,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-    libpcap
-    alsa
-    fontconfig
+    net-libs/libpcap
+    media-libs/fontconfig
 "
 RDEPEND="${DEPEND}"
-BDEPEND="
-    libpcap
-    alsa
-    fontconfig
-"
+BDEPEND="${DEPEND}"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
