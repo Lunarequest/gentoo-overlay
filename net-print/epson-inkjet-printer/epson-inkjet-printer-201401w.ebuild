@@ -2,13 +2,11 @@ EAPI=8
 
 inherit autotools
 
-_suffix=1lsb3.2.src.rpm
 _pkgname_filter=epson-inkjet-printer-filter
 
 DESCRIPTION="Epson printer driver (L456, L455, L366, L365, L362, L360, L312, L310, L222, L220, L132, L130)"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
-SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/03/45/41/92e9c9254f0ee4230a069545ba27ec2858a2c457/${P}-${PV}-${_suffix}"
-
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/03/45/41/92e9c9254f0ee4230a069545ba27ec2858a2c457/${P}-1.0.0-1lsb3.2.src.rpm"
 LICENSE='LGPL & Epson Licence Agreement'
 SLOT=0
 KEYWORDS="amd64 i686"
