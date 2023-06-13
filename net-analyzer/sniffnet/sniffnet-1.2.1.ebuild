@@ -454,7 +454,10 @@ DESCRIPTION="Application to comfortably monitor your network traffic"
 # Double check the homepage as the cargo_metadata crate
 # does not provide this value so instead repository is used
 HOMEPAGE="https://github.com/GyulyVGC/sniffnet"
-SRC_URI="$(cargo_crate_uris)"
+SRC_URI="
+    $(cargo_crate_uris)
+    https://github.com/GyulyVGC/sniffnet/archive/refs/tags/v${PV}.tar.gz
+"
 
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
