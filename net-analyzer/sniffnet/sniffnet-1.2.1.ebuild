@@ -482,4 +482,5 @@ src_compile() {
 
 src_install() {
     cargo_src_install
+	setcap cap_net_raw,cap_net_admin=eip ${D}/usr/bin/sniffnet
 }
