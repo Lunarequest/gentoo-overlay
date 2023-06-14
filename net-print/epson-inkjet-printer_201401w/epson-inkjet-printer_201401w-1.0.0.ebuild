@@ -26,29 +26,29 @@ src_configure() {
     cd epson-inkjet-printer-filter-1.0.0
     patch -p1 -i ${FILESDIR}/1.0.0-fixbuild.patch
     eautoreconf -f -i
-    ./configure LDFLAGS="${LDFLAGS} -Wl,--no-as-needed" --prefix=/opt/${MY_P}
+    ./configure LDFLAGS="${LDFLAGS} -Wl,--no-as-needed" --prefix=/opt/${MY_PN}
     make
 }
 
 src_install() {
     cd "${S}/${MY_P}"
-    install -d "${D}/opt/${P}/"
+    install -d "${D}/opt/${MY_PN}/"
     if [ "$CARCH" = "x86_64" ]; then
-        cp -a --no-preserve=mode lib64 "${D}/opt/${MY_P}"
+        cp -a --no-preserve=mode lib64 "${D}/opt/${MY_PN}"
     else
-        cp -a --no-preserve=mode lib "${D}/opt/${MY_P}"
+        cp -a --no-preserve=mode lib "${D}/opt/${MY_PN}"
     fi
-    cp -a --no-preserve=mode resource "${D}/opt/${MY_P}"
+    cp -a --no-preserve=mode resource "${D}/opt/${MY_PN}"
 
     if [ -e "watermark" ]; then
-        cp -a --no-preserve=mode watermark "${D}/opt/${MY_P}"
+        cp -a --no-preserve=mode watermark "${D}/opt/${MY_PN}"
     fi
-    install -d "${D}/usr/share/cups/model/${MY_P}"
-    install -m 644 ppds/* "${D}/usr/share/cups/model/${MY_P}"
+    install -d "${D}/usr/share/cups/model/${MY_PN}"
+    install -m 644 ppds/* "${D}/usr/share/cups/model/${MY_PN}"
 
     cd "${S}/${_pkgname_filter}-${PV}"
-    install -d "${D}/opt/${MY_PN}/cups/lib/filter/"
-    install -m 755 src/epson_inkjet_printer_filter "${D}/opt/${MY_PN}/cups/lib/filter/epson_inkjet_printer_filter"
+    mkdir -p "${D}/opt/${_pkgname_filter}/cups/lib/filter/"
+    install -m 755 src/epson_inkjet_printer_filter "${D}/opt/${_pkgname_filter}/cups/lib/filter/epson_inkjet_printer_filter"
 }
 
 
