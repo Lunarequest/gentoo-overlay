@@ -4,6 +4,7 @@ inherit autotools rpm
 
 _pkgname_filter=epson-inkjet-printer-filter
 MY_P=${P/_/-}
+MY_PN=${PN/_/-}
 
 DESCRIPTION="Epson printer driver (L456, L455, L366, L365, L362, L360, L312, L310, L222, L220, L132, L130)"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
@@ -47,7 +48,8 @@ src_install() {
 
     cd "${S}/${_pkgname_filter}-${PV}"
     install -d "${D}/opt/${MY_P}/cups/lib/filter/"
-    install -m 755 src/epson_inkjet_printer_filter "${D}/opt/${MY_P}/cups/lib/filter/epson_inkjet_printer_filter"
+    /opt/epson-inkjet-printer-201401w/cups/lib/filter/epson_inkjet_printer_filter
+    install -m 755 src/epson_inkjet_printer_filter "${D}/opt/${MY_PN}/cups/lib/filter/epson_inkjet_printer_filter"
 }
 
 
