@@ -47,8 +47,8 @@ src_install() {
     install -m 644 ppds/* "${D}/usr/share/cups/model/${MY_P}"
 
     cd "${S}/${_pkgname_filter}-${PV}"
-    install -d "${D}/opt/${MY_P}/cups/lib/filter/"
-    install -m 755 src/epson_inkjet_printer_filter "${D}/opt/epson-inkjet-printer-201401w/cups/lib/filter/epson_inkjet_printer_filter"
+    install -d "${D}/opt/${MY_PN}/cups/lib/filter/"
+    install -m 755 src/epson_inkjet_printer_filter "${D}/opt/${MY_PN}/cups/lib/filter/epson_inkjet_printer_filter"
 }
 
 
