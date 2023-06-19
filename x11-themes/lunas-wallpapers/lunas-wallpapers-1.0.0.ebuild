@@ -1,5 +1,6 @@
 EAPI=8
 
+S="${WORKDIR}/${P}"
 DESCRIPTION="Wallpapers & various images used by luna"
 HOMEPAGE="https://nullrequest.com"
 SRC_URI="
@@ -16,7 +17,6 @@ BDEPEND="
     media-libs/netpbm
 "
 src_prepare() {
-    S="${WORKDIR}/${P}"
     mdkir -p ${S}
     cp xenia_splash.png ${S}
     cp xenia_cpu.png ${S}
