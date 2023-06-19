@@ -18,7 +18,9 @@ BDEPEND="
 "
 src_unpack() {
     mkdir -p ${S}
-    cp ${A} ${S}
+    ls ${DISTDIR}/
+    cp ${DISTDIR}/xenia_splash.png ${S}
+    cp ${DISTDIR}/xenia_cpu.png ${S}
 }
 
 src_prepare() {
@@ -27,11 +29,11 @@ src_prepare() {
 
 src_compile() {
     convert xenia_splash.png -type truecolor xenia_splash.bmp
-    pngtopnm xenia_cpu.png | ppmquant -fs223 | pnmtoplainpnm > xenia_cpu.ppm
+    pngtopnm xenia_cpu.png | ppmquant 224 | pnmtoplainpnm > xenia_cpu.ppm
 }
 
 src_install() {
-    install -D "${D}/etc/splash"
+    install -d "${D}/etc/splash"
     install xenia_cpu.ppm "${D}/etc/splash"
     install xenia_splash.bmp "${D}/etc/splash"
 }
