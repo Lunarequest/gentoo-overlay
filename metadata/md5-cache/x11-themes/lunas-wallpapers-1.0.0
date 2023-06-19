@@ -1,5 +1,5 @@
 BDEPEND=media-gfx/imagemagick media-libs/netpbm
-DEFINED_PHASES=compile install
+DEFINED_PHASES=compile install prepare
 DESCRIPTION=Wallpapers & various images used by luna
 EAPI=8
 HOMEPAGE=https://nullrequest.com
@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=CC0-1.0
 SLOT=0
 SRC_URI=https://xenia-linux-site.glitch.me/images/cathodegaytube-splash.png -> xenia_splash.png https://xenia-linux-site.glitch.me/images/questfortori3.png -> xenia_cpu.png
-_md5_=8fca380f23ba4bbec48daebe73a35fd9
+_md5_=84ef233f7b5b1d4f73db2584f5a27d2c

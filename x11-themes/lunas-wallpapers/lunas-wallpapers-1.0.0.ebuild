@@ -15,6 +15,9 @@ BDEPEND="
     media-gfx/imagemagick
     media-libs/netpbm
 "
+src_prepare() {
+    default
+}
 
 src_compile() {
     convert xenia_splash.png -type truecolor xenia_splash.bmp
