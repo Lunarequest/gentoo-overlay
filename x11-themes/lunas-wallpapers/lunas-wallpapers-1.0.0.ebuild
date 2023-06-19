@@ -16,7 +16,6 @@ BDEPEND="
     media-libs/netpbm
 "
 src_prepare() {
-    default
     S="${WORKDIR}/${P}"
     mdkir -p ${S}
     cp xenia_splash.png ${S}
