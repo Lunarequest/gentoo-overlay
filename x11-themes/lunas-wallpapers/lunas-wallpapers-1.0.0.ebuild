@@ -17,9 +17,8 @@ BDEPEND="
     media-libs/netpbm
 "
 src_unpack() {
-    mdkir -p ${S}
-    cp xenia_splash.png ${S}
-    cp xenia_cpu.png ${S}
+    mkdir -p ${S}
+    cp ${A} ${S}
 }
 
 src_prepare() {
