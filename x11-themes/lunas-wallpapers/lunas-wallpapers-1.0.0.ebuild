@@ -17,6 +17,9 @@ BDEPEND="
 "
 src_prepare() {
     default
+    mdkir -p ${S}
+    cp xenia_splash.png ${S}
+    cp xenia_cpu.png ${S}
 }
 
 src_compile() {
