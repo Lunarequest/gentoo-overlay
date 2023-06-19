@@ -16,10 +16,14 @@ BDEPEND="
     media-gfx/imagemagick
     media-libs/netpbm
 "
-src_prepare() {
+src_unpack() {
     mdkir -p ${S}
     cp xenia_splash.png ${S}
     cp xenia_cpu.png ${S}
+}
+
+src_prepare() {
+    default
 }
 
 src_compile() {
