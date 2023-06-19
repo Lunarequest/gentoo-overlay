@@ -17,6 +17,7 @@ BDEPEND="
 "
 src_prepare() {
     default
+    S="${WORKDIR}/${P}"
     mdkir -p ${S}
     cp xenia_splash.png ${S}
     cp xenia_cpu.png ${S}
