@@ -10,7 +10,7 @@ SRC_URI="${URL}/${PN}/${PN}-${PV}.tar.xz
         verify-sig? ( ${URL}/${PN}/${PN}-${PV}.tar.xz.asc )"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x86-linux"
 SLOT="0"
-LICENSE="BSD or GPLv2" #I'm not sure how this is possible but it is
+LICENSE="BSD OR GPL-2.0-or-later" #I'm not sure how this is possible but it is
 
 IUSE="systemd static fips coreutils hmac"
 
