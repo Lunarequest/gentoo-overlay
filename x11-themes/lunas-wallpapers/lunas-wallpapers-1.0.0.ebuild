@@ -29,7 +29,8 @@ src_prepare() {
 
 src_compile() {
     convert xenia_splash.png -type truecolor xenia_splash.bmp
-    pngtopnm xenia_cpu.png | ppmquant 224 | pnmtoplainpnm > xenia_cpu.ppm
+    convert xenia_cpu.png -resize 80x80 xenia_cpu.png
+	pngtopnm xenia_cpu.png | ppmquant 224 | pnmtoplainpnm > xenia_cpu.ppm
 }
 
 src_install() {

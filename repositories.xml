@@ -4,7 +4,7 @@
   <repo quality="experimental" status="unofficial">
     <name><![CDATA[ldragon]]></name>
     <description lang="en"><![CDATA[ldragon Misc Overlay]]></description>
-    <homepage>https://github.com/henrikp/gentoo-overlay</homepage>
+    <homepage>https://github.com/Lunarequest/gentoo-overlay</homepage>
     <owner type="person">
       <email>luna@nullrequest.com</email>
       <name><![CDATA[Luna D Dragon]]></name>
