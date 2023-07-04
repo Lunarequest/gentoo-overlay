@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=CC0-1.0
 SLOT=0
 SRC_URI=https://xenia-linux-site.glitch.me/images/cathodegaytube-splash.png -> xenia_splash.png https://xenia-linux-site.glitch.me/images/questfortori3.png -> xenia_cpu.png
-_md5_=2f3449f8b82a581ffe5696080279196f
+_md5_=ef34e8d11bac22a92dee828b4dba0cf1
