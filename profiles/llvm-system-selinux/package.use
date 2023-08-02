@@ -1,0 +1,2 @@
+sys-auth/pambase homed
+sys-apps/systemd cryptsetup homed boot gnuefi
