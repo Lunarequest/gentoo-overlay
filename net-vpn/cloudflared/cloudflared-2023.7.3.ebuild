@@ -12,17 +12,33 @@ BDEPEND="dev-lang/go"
 
 src_configure() {
     default
-    tar xvf "${FILESDIR}/${P}-vendor.tar.gz"
+    tar xf "${FILESDIR}/${P}-vendor.tar.gz"
     rm -rf vendor
     mv ${P}/vendor .
+    mkdir build
 }
 
 src_compile() {
-    ego build
+    go build -v \
+    -buildmode=pie \
+    -mod=vendor \
+    -modcacherw \
+    -ldflags "-compressdwarf=false \
+    -linkmode external \
+    -extldflags ${LDFLAGS} \
+      -X main.Version=${pkgver} \
+      -X main.BuildTime=${build_time} \
+      -X github.com/cloudflare/cloudflared/cmd/cloudflared/updater.BuiltForPackageManager=portage" \
+    -o build \
+    ./cmd/...
+
 }
 
 src_install() {
-    dobin cloudflared
-
     default
+    install -vDm755 -t "${D}/usr/bin" "build/${PN}"
+
+    # man page
+    install -vDm644 -t "${D}/usr/share/man/man1" "build/${PN}.1"
+
 }
