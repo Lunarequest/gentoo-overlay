@@ -12,8 +12,6 @@ BDEPEND="dev-lang/go"
 
 src_configure() {
     default
-    tar xvf ${FILESDIR}/${P}-vendor.tar.gz
-    mv ${P}/vendor .
 }
 
 src_compile() {
