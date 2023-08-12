@@ -11,7 +11,9 @@ KEYWORDS="amd64 i686"
 BDEPEND="dev-lang/go"
 
 src_configure() {
-    tar xvf ${FILESDIR}/cloudflared-2023.7.3-vendor.tar.gz
+    default
+    tar xvf ${FILESDIR}/${PN}-vendor.tar.gz
+    mv ${PN}/vendor .
 }
 
 src_compile() {
