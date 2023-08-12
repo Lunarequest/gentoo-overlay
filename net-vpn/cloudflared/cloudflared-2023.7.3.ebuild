@@ -12,6 +12,9 @@ BDEPEND="dev-lang/go"
 
 src_configure() {
     default
+    tar xvf "${P}-vendor.tar.gz"
+    rm -rf vendor
+    mv ${P}/vendor .
 }
 
 src_compile() {
