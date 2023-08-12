@@ -26,8 +26,7 @@ src_compile() {
     -ldflags "-compressdwarf=false \
     -linkmode external \
     -extldflags ${LDFLAGS} \
-      -X main.Version=${pkgver} \
-      -X main.BuildTime=${build_time} \
+      -X main.Version=${PV} \
       -X github.com/cloudflare/cloudflared/cmd/cloudflared/updater.BuiltForPackageManager=portage" \
     -o build \
     ./cmd/...
@@ -37,8 +36,6 @@ src_compile() {
 src_install() {
     default
     install -vDm755 -t "${D}/usr/bin" "build/${PN}"
-
-    # man page
     install -vDm644 -t "${D}/usr/share/man/man1" "build/${PN}.1"
 
 }
