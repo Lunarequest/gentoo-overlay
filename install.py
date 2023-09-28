@@ -14,11 +14,11 @@ progs = ['[', "arch", "b2sum", "b3sum", "base32", "base64", "basename", "basenc"
 coreutils = "/usr/bin/coreutils"
 
 for prog in progs:
-    if os.path.exists(f"/usr/bin{prog}"):
+    if os.path.exists(f"/usr/bin/{prog}"):
         print(f"{prog} is already installed deleting")
-        os.system(f"rm -rf /usr/bin{prog}")
+        os.system(f"rm -rf /usr/bin/{prog}")
     print(f"symlinking {prog}")
-    os.system(f"/usr/bin/coreutils ln -s /usr/bin/coreutils /usr/bin/{prog}")
+    os.system(f"/usr/bin/coreutils ln /usr/bin/coreutils /usr/bin/{prog}")
 
 out = ""
 for prog in progs:
