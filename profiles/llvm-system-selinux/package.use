@@ -1,2 +1,3 @@
 sys-auth/pambase homed
 sys-apps/systemd cryptsetup homed boot
+sys-boot/gnu-efi custom-cflags
